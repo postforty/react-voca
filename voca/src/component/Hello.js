@@ -2,7 +2,8 @@ import World from "./World";
 import styles from "./Hello.module.css";
 import { useState } from "react";
 
-export default function Hello() {
+export default function Hello({ age }) {
+  const msg = age > 19 ? "성인 입니다." : "미성년자 입니다.";
   function showName() {
     console.log("Mike");
   }
@@ -65,7 +66,9 @@ export default function Hello() {
       <div className={styles.box}>Hello</div>
       <div>
         <h1 id="name">state</h1>
-        <h2>{name}</h2>
+        <h2>
+          {name}({age}) : {msg}
+        </h2>
         <button onClick={changeName}>Change</button>
       </div>
     </div>
