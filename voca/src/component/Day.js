@@ -1,12 +1,13 @@
 import dummy from "../db/data.json";
+import { useParams } from "react-router-dom";
 
 export default function Day() {
-  const day = 1;
-  const wordList = dummy.words.filter((word) => word.day === day);
-  console.log(wordList);
+  const day = useParams().day;
+  const wordList = dummy.words.filter((word) => word.day === Number(day));
 
   return (
     <>
+      <h2>Day {day}</h2>
       <table>
         <tbody>
           {wordList.map((word) => (
@@ -20,5 +21,3 @@ export default function Day() {
     </>
   );
 }
-
-// 6:14 React JS #9 더미 데이터 구현, map() 반복문 - 초보자를 위한 리액트 강좌
