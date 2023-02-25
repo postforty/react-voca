@@ -25,4 +25,3 @@ export default function Word({ word }) {
     </tr>
   );
 }
-// #11     7:26부터
