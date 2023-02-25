@@ -25,3 +25,5 @@ export default function Word({ word }) {
     </tr>
   );
 }
+
+// React JS #12 useEffect, fetch()로 API 호출 - 초보자를 위한 리액트 강좌 부터
