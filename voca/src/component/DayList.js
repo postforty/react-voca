@@ -9,9 +9,19 @@ export default function DayList() {
     setCount(count + 1);
   }
 
+  function onClick2() {
+    setDays([
+      ...days,
+      {
+        id: Math.random(),
+        day: 1,
+      },
+    ]);
+  }
+
   useEffect(() => {
     console.log("Count change");
-  });
+  }, []);
 
   return (
     <>
@@ -23,6 +33,7 @@ export default function DayList() {
         ))}
       </ul>
       <button onClick={onClick}>{count}</button>
+      <button onClick={onClick2}>{count}</button>
     </>
   );
 }
