@@ -25,6 +25,13 @@ export default function Word({ word }) {
       }
     });
   }
+
+  function del() {
+    if (window.confirm("삭제 하시겠습니까?")) {
+      fetch(`http://localhost:3001/words/${word.id}`, { method: "DELETE" });
+    }
+  }
+
   return (
     <tr className={isDone ? "off" : ""}>
       <td>
@@ -34,10 +41,10 @@ export default function Word({ word }) {
       <td>{isShow && word.kor}</td>
       <td>
         <button onClick={toggleShow}>뜻 {isShow ? "숨기기" : "보기"}</button>
-        <button className="btn_del">삭제</button>
+        <button onClick={del} className="btn_del">
+          삭제
+        </button>
       </td>
     </tr>
   );
 }
-
-// React JS #12 useEffect, fetch()로 API 호출 - 초보자를 위한 리액트 강좌 부터
