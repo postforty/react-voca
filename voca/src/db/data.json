@@ -22,13 +22,6 @@
       "isDone": true
     },
     {
-      "id": 2,
-      "day": 1,
-      "eng": "boy",
-      "kor": "소년",
-      "isDone": true
-    },
-    {
       "id": 3,
       "day": 2,
       "eng": "apple",
